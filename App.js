@@ -1,11 +1,11 @@
 import React from 'react'
-import { Text, View, StyleSheet, SafeAreaView } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import Title from './src/components/Title/'
 import Main from './src/components/Main/'
 
 export default () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Title />
       <Main />
     </View>
@@ -13,12 +13,10 @@ export default () => {
 }
 
 const styles = StyleSheet.create({
-  page: {
-    width: 200,
-    height: 200,
-    backgroundColor: '#ff0000'
-  },
-  texto: {
-    color: '#fff', fontSize: 25
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 })
